@@ -8,21 +8,25 @@
 
 namespace app\models;
 
-use Yii;
-use yii\base\Model;
+use yii\db\ActiveRecord;
 
 /**
  * ContactForm is the model behind the contact form.
  */
-class Game extends Model
+class Game extends ActiveRecord
 {
-    public $Day;
-    public $AwayTeam;
-    public $HomeTeam;
-    public $StadiumID;
-
     public static function tableName()
     {
         return 'game';
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'Day' => 'Дата',
+            'AwayTeam' => 'Команда гостей',
+            'HomeTeam' => 'Команда местных',
+            'StadiumID' => 'ID стадиона',
+        ];
     }
 }
