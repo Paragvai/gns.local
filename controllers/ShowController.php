@@ -23,7 +23,7 @@ class ShowController extends Controller
     public function actionIndex()
     {
         $curl = new curl\Curl();
-        $resJSON = $curl->get('http://gns.local/web/index.php/games');
+        $resJSON = $curl->get('http://e96999l0.bget.ru/web/index.php/games');
 
         $resArray = json_decode($resJSON);
 
